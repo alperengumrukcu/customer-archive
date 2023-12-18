@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  postgres:
+    image: postgres
+    container_name: nishdb
+    environment:
+      - POSTGRES_DB=nishdb
+      - POSTGRES_USER=alperen
+      - POSTGRES_PASSWORD=yZ5ePXX2VN27jdx
+    ports:
+      - "5432:5432"
