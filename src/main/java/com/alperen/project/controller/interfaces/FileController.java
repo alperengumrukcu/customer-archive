@@ -21,4 +21,6 @@ public interface FileController {
     ResponseEntity<BaseResponse<FileResponse>> updateFile(FileUpdateRequest updateRequest);
     @GetMapping("/customer_id")
     ResponseEntity<BaseResponse<List<FileResponse>>> getAllFileByCustomerId(@RequestParam("customerId") Long id);
+    @PostMapping("/delete/{id}")
+    ResponseEntity<BaseResponse<?>> deleteByFileId(@PathVariable("id") Long id);
 }

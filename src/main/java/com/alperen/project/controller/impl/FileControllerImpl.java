@@ -6,6 +6,7 @@ import com.alperen.project.model.request.file.FileSaveRequest;
 import com.alperen.project.model.request.file.FileUpdateRequest;
 import com.alperen.project.model.response.file.FileResponse;
 import com.alperen.project.service.interfaces.FileService;
+import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -50,5 +51,10 @@ public class FileControllerImpl implements FileController {
     public ResponseEntity<BaseResponse<List<FileResponse>>> getAllFileByCustomerId(Long id) {
         List<FileResponse> responseList = fileService.getAllFilesByCustomerId(id);
         return BaseResponse.ok(responseList,HttpStatus.OK,"Tüm dosyaların listesi");
+    }
+    @Override
+    public ResponseEntity<BaseResponse<?>> deleteByFileId(Long id) {
+        fileService.deleteById(id);
+        return BaseResponse.ok(HttpStatus.OK);
     }
 }
