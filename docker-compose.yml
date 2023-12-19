@@ -9,3 +9,29 @@ services:
       - POSTGRES_PASSWORD=yZ5ePXX2VN27jdx
     ports:
       - "5432:5432"
+
+  postgres2:
+    image: postgres
+    container_name: nishdb2
+    environment:
+      - POSTGRES_DB=nishdb2
+      - POSTGRES_USER=alperen
+      - POSTGRES_PASSWORD=yZ5ePXX2VN27jdx
+    ports:
+      - "5433:5432"
+
+  backend:
+    image: alperengumrukcu/nish-project-docker
+    container_name: nish-project-backend
+    build: ./
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - postgres
+
+    environment:
+      - spring.datasource.url=jdbc:postgresql://nishdb:5432/nishdb
+      - spring.datasource.username=alperen
+      - spring.datasource.password=yZ5ePXX2VN27jdx
+      - spring.jpa.hibernate.ddl-auto=update
