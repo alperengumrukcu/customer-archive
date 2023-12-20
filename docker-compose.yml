@@ -21,7 +21,7 @@ services:
       - "5433:5432"
 
   backend:
-    image: alperengumrukcu/nish-project-docker-v2
+    image: alperengumrukcu/nish-project-docker
     container_name: nish-project-backend
     build: ./
     ports:
