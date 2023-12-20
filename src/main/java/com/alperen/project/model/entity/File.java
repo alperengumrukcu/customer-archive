@@ -1,14 +1,12 @@
 package com.alperen.project.model.entity;
 
 import com.alperen.project.base.BaseEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
-@Entity(name = "files")
+@Entity
+@Table(name = "files",schema = "file")
 public class File extends BaseEntity {
     @Column(name = "name",nullable = false)
     private String name;
