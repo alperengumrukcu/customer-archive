@@ -1,4 +1,6 @@
-# Bu projede yerel Docker PostgreSQL veritabanı kullanılır. 
+# Bu projede Docker PostgreSQL veritabanı kullanılır. 
+# Bonus 1 : files tablosu file şeması altında diğer tablolar public şeması altında tutulur.
+
 Veritabanını kullanmak için makine üzerinde Docker'ın yüklü olması gerekir.<br><br> 
 Veritabanını oluşturup çalıştırmak ve projeyi çalıştırmak için, terminalden docker-compose.yml dosyasının bulunduğu dizine giderek aşağıdaki komutu çalıştırınız.
 
