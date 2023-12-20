@@ -3,6 +3,6 @@ LABEL authors="alperengumrukcu"
 
 EXPOSE 8080
 
-ADD target/*.jar nishproject-docker.jar
+ADD target/*.jar nish-project-docker.jar
 
-ENTRYPOINT ["java", "-jar","/nishproject-docker.jar"]
+ENTRYPOINT ["java", "-jar","/nish-project-docker.jar"]

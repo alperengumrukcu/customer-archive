@@ -27,3 +27,5 @@ services:
       - spring.datasource.username=alperen
       - spring.datasource.password=yZ5ePXX2VN27jdx
       - spring.jpa.hibernate.ddl-auto=update
+    volumes:
+      - ./upload:/upload
