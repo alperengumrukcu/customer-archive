@@ -3,10 +3,12 @@ package com.alperen.project.model.entity;
 import com.alperen.project.base.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@Entity(name = "customer")
+@Entity
+@Table(name = "customer",schema = "public")
 public class Customer extends BaseEntity {
     @Column(name = "name",nullable = false)
     private String name;

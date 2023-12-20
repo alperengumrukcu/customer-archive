@@ -9,7 +9,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "users")
+@Table(name = "users",schema = "public")
 public class User extends BaseEntity implements UserDetails {
 
     @Column(name = "name",nullable = false)
