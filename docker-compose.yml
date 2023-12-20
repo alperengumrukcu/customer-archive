@@ -32,6 +32,7 @@ services:
 
     environment:
       - spring.datasource.url=jdbc:postgresql://nishdb:5432/nishdb
+      - spring.datasource.second.url=jdbc:postgresql://nishdb:5432/nishdb?currentSchema=file
       - spring.datasource.username=alperen
       - spring.datasource.password=yZ5ePXX2VN27jdx
       - spring.jpa.hibernate.ddl-auto=update
